@@ -1,0 +1,56 @@
+<div class="details" *ngIf="data">
+    <div class="row">
+        <aside class="col-sm-3">
+            <device-details [data]="data"></device-details>
+        </aside>
+
+        <div class="col-sm-7">
+
+            <section>
+                <mat-card>
+                    <mat-card-title> Sim Info </mat-card-title>
+                    <mat-card-content>
+                        <sim-info [data]="data.sim_info"></sim-info>
+                    </mat-card-content>
+                </mat-card>
+            </section>
+
+            <section class="mt-20">
+                <mat-card>
+                    <mat-card-title> Bank Info </mat-card-title>
+                    <mat-card-content>
+                        <bank-info [data]="data.bank_info"></bank-info>
+                    </mat-card-content>
+                </mat-card>
+            </section>
+
+            <section class="mt-20">
+                <mat-card>
+                    <mat-card-title> Shipping Bank Info </mat-card-title>
+                    <mat-card-content>
+                        <shipping-info [data]="data.shipping_bank_details"></shipping-info>
+                    </mat-card-content>
+                </mat-card>
+            </section>
+
+            <section class="mt-20">
+                <mat-card>
+                    <mat-card-title> Delivery Info </mat-card-title>
+                    <mat-card-content>
+                        <delivery-info [data]="data.delivery_info"></delivery-info>
+                    </mat-card-content>
+                </mat-card>
+            </section>
+
+            <section class="mt-20">
+                <mat-card>
+                    <mat-card-title> Shipping Details </mat-card-title>
+                    <mat-card-content>
+                        <shipping-details [data]="data.shipping_details"></shipping-details>
+                    </mat-card-content>
+                </mat-card>
+            </section>
+
+        </div>
+    </div>
+</div>

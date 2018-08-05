@@ -1,10 +1,24 @@
 import { Component } from '@angular/core';
+import { AppService } from './app.service';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  styleUrls: ['app.component.scss'],
+  providers: [AppService]
 })
 export class AppComponent {
-  title = 'app';
+  public data = {};
+
+  constructor(private _appService : AppService) {
+  }
+
+  ngOnInit () {
+    this.getDeviceDetailsData()
+  }
+
+  public getDeviceDetailsData() {
+    this._appService.getDeviceDetails()
+        .subscribe(data => this.data = data);
+  }
 }

@@ -1,0 +1,56 @@
+<div class="device-details" *ngIf="data">
+    <div class="device-serial-no mb-20">
+      <label class="data-label">{{data.dab_device_no}}</label>
+      <label class="text-label">Dab Device Serial Number</label>
+    </div>
+
+    <div class="customer-name mb-20">
+      <label class="data-label">{{data.customer_name}}</label>
+      <label class="text-label">Customer Name</label>
+    </div>
+
+    <div class="wan mb-20">
+      <label class="data-label">{{data.wan_ip}}</label>
+      <label class="text-label">WAN</label>
+    </div>
+
+    <div class="lan mb-20">
+      <label class="data-label">{{data.lan_ip}}</label>
+      <label class="text-label">LAN</label>
+    </div>
+
+    <div class="atm-interface mb-20">
+      <label class="data-label">{{data.atm_or_interface}}</label>
+      <label class="text-label">ATM / Interface</label>
+    </div>
+
+    <div class="atm-interface-ip mb-20">
+      <label class="data-label">{{data.atm_or_interface_ip}}</label>
+      <label class="text-label">ATM / Interface IP</label>
+    </div>
+
+    <div class="atm-interface-port mb-20">
+      <label class="data-label">{{data.port_no}}</label>
+      <label class="text-label">ATM / Interface Port</label>
+    </div>
+
+    <div class="atm-ej-port mb-20">
+      <label class="data-label">{{data.ej_ports}}</label>
+      <label class="text-label">ATM EJ Port</label>
+    </div>
+
+    <div class="atm-server-ip mb-20">
+      <label class="data-label">{{data.server_ip}}</label>
+      <label class="text-label">ATM Server IP</label>
+    </div>
+
+    <div class="atm-server-port mb-20">
+      <label class="data-label">{{data.server_port}}</label>
+      <label class="text-label">ATM Server Port</label>
+    </div>
+
+    <div class="pcb-sr-no mb-20">
+      <label class="data-label">{{data.pcb_serial_no_or_tp_link}}</label>
+      <label class="text-label">PCB Serial Number / TP LINK </label>
+    </div>
+</div>

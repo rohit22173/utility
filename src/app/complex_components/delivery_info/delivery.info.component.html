@@ -1,0 +1,44 @@
+<div class="delivery-info" *ngIf="data">
+    <div class="row">
+        <div class="col mb-20">
+          <label class="data-label">{{data.delivery_chalan_no}}  ( {{data.delivery_chalan_date}} )</label>
+          <label class="text-label">Challan</label>
+        </div>
+    </div>
+
+    <label class="text-label">Delivery Contact Person's Info</label>
+    <div class="row align-bottom ">
+        <div class="col mb-20">
+            <label class="data-label">{{data.contact_person}}</label>
+            <label class="text-label">Name</label>
+        </div>
+
+        <div class="col mb-20">
+            <label class="data-label">{{data.mobile_no}}</label>
+            <label class="text-label">Mobile Number</label>
+        </div>
+
+        <div class="col mb-20">
+            <label class="data-label">{{data.email}}</label>
+            <label class="text-label">Email</label>
+        </div>
+    </div>
+
+    <label class="text-label">HO Contact Person's Info</label>
+    <div class="row align-bottom ">
+        <div class="col mb-20">
+            <label class="data-label">{{data.ho_contact_person}}</label>
+            <label class="text-label">Name</label>
+        </div>
+
+        <div class="col mb-20">
+            <label class="data-label">{{data.ho_mobile_no}}</label>
+            <label class="text-label">Mobile Number</label>
+        </div>
+
+        <div class="col mb-20">
+            <label class="data-label">{{data.ho_email}}</label>
+            <label class="text-label">Email</label>
+        </div>
+    </div>
+</div>

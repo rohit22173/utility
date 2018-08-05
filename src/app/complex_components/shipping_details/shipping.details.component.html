@@ -1,0 +1,25 @@
+<div class="shipping-details" *ngIf="data">
+    <div class="row">
+        <div class="col mb-20">
+          <label class="data-label">{{data.courier_name}} ({{data.docket_no}})</label>
+          <label class="text-label">Courier Name</label>
+        </div>
+    </div>
+
+    <div class="row align-bottom">
+        <div class="col mb-20">
+            <label class="data-label">{{data.delivery_date}}</label>
+            <label class="text-label">Delivery Date</label>
+        </div>
+
+        <div class="col mb-20">
+            <label class="data-label">{{data.delivery_period}}</label>
+            <label class="text-label">Delivery Period</label>
+        </div>
+
+        <div class="col mb-20">
+            <label class="data-label">{{data.delivery_confirmed_by}}</label>
+            <label class="text-label">Delivery Confirmed By</label>
+        </div>
+    </div>
+</div>

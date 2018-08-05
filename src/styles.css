@@ -1,1 +1,30 @@
 /* You can add global styles to this file, and also import other style files */
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+@import "~@fortawesome/fontawesome-free/css/all.min.css";
+
+.mb-20 {
+    margin-bottom: 20px;
+}
+
+.data-label {
+    display: flex;
+    margin-bottom: 0;
+    color: rgba(0, 0, 0, 0.87);
+    font-weight: 500;
+    font-size: 14px;
+}
+
+.text-label {
+    display: flex;
+    margin-bottom: 0;
+    color: rgba(0, 0, 0, 0.54);
+    font-size: 12px;
+}
+
+.mt-20 {
+    margin-top: 20px ;
+}
+
+.align-bottom {
+    align-items: flex-end;
+}

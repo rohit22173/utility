@@ -1,0 +1,25 @@
+<div class="bank-info" *ngIf="data">
+    <div class="row">
+        <div class="col mb-20">
+          <label class="data-label">{{data.name}}  ( {{data.short_name}} )</label>
+          <label class="text-label">Bank Name</label>
+        </div>
+    </div>
+
+    <div class="row align-bottom ">
+        <div class="col mb-20">
+            <label class="data-label">{{data.ho_location}}</label>
+            <label class="text-label">HQ Location</label>
+        </div>
+
+        <div class="col mb-20">
+            <label class="data-label">{{data.branch_name}}</label>
+            <label class="text-label">Branch Name</label>
+        </div>
+
+        <div class="col mb-20">
+            <label class="data-label">{{data.atm_or_interface_location}}</label>
+            <label class="text-label">ATM / Interface Location</label>
+        </div>
+    </div>
+</div>

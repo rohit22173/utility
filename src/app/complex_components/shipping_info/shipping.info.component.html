@@ -1,0 +1,42 @@
+<div class="shipping-info" *ngIf="data">
+    <div class="row">
+        <div class="col mb-20">
+          <label class="data-label">{{data.name}}</label>
+          <label class="text-label">Bank Name</label>
+        </div>
+    </div>
+
+    <div class="row align-bottom ">
+        <div class="col mb-20">
+            <label class="data-label">{{data.city}}</label>
+            <label class="text-label">City</label>
+        </div>
+
+        <div class="col mb-20">
+            <label class="data-label">{{data.district}}</label>
+            <label class="text-label">District</label>
+        </div>
+
+        <div class="col mb-20">
+            <label class="data-label">{{data.sub_district}}</label>
+            <label class="text-label">Sub District</label>
+        </div>
+    </div>
+
+    <div class="row align-bottom ">
+        <div class="col mb-20">
+            <label class="data-label">{{data.state}}</label>
+            <label class="text-label">State</label>
+        </div>
+
+        <div class="col mb-20">
+            <label class="data-label">{{data.country}}</label>
+            <label class="text-label">Country</label>
+        </div>
+
+        <div class="col mb-20">
+            <label class="data-label">{{data.zip_code}}</label>
+            <label class="text-label">Zip</label>
+        </div>
+    </div>
+</div>
