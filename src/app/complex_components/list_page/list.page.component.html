@@ -1,0 +1,28 @@
+<div class="list-page" *ngIf="data">
+    <div class="row">
+        <div class="col">
+            <form class="example-form">
+                <mat-form-field class="col">
+                    <input matInput placeholder="Search dab serial number" [formControl]="dabFormControl">
+                </mat-form-field>
+            </form>
+        </div>
+    </div>
+
+    <div class="row">
+        <div *ngFor="let item of data" class="col-sm-6 mt-20">
+            <mat-card (click)="cardClick(item)">
+                <mat-card-title> #{{item.dab_device_no}} </mat-card-title>
+                <mat-card-content>
+                    <div class="row">
+                        <div class="customer-name mb-20 col">
+                            <label class="text-label">{{item.customer_name}}</label>
+                            <label class="text-label">{{item.atm_or_interface}}</label>
+                            <label class="text-label">{{item.pcb_serial_no_or_tp_link}}</label>
+                        </div>
+                    </div>
+                </mat-card-content>
+            </mat-card>
+        </div>
+    </div>
+</div>

@@ -1,4 +1,5 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { SharedService } from '../../shared.service';
 
 @Component({
   selector: 'list-details',
@@ -6,13 +7,18 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['list.details.component.scss'],
   providers: []
 })
-export class ListDetailsComponent {
+export class ListDetailsComponent implements OnInit{
 
   @Input() data = {};
 
-  constructor() {
+  constructor( private _sharedService: SharedService ) {
 
   }
+
+  ngOnInit() {
+    this.data = this._sharedService.getSelectedItem();
+  }
+
 
 
 }

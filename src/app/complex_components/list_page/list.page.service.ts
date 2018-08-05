@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 
 @Injectable()
-export class AppService {
+export class ListPageService {
     constructor(private http: HttpClient) { }
 
     public getDeviceDetails() {
