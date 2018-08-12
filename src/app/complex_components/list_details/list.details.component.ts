@@ -1,5 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { SharedService } from '../../shared.service';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'list-details',
@@ -11,12 +12,14 @@ export class ListDetailsComponent implements OnInit{
 
   @Input() data = {};
 
-  constructor( private _sharedService: SharedService ) {
+  constructor( private _sharedService: SharedService,
+               private _route: ActivatedRoute) {
 
   }
 
   ngOnInit() {
-    this.data = this._sharedService.getSelectedItem();
+    console.log(this._route.snapshot.data);
+    this.data = this._route.snapshot.data['data'][0];
   }
 
 

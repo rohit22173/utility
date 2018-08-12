@@ -12,7 +12,7 @@ import { ListPageService } from './list.page.service';
 })
 export class ListPageComponent implements OnInit {
 
-  public dabFormControl = new FormControl('', []);
+  public dabId = new FormControl('', []);
 
   public data;
 
@@ -36,8 +36,19 @@ export class ListPageComponent implements OnInit {
   }
 
   public cardClick(data) {
-    this._sharedService.setSelectedItem(data);
-    this._router.navigate(['dashboard', 'details']);
+    var encodedString = btoa(data.dab_device_no);
+   // this._sharedService.setSelectedItem(data);
+    this._router.navigate(['dashboard', 'details', encodedString]);
+  }
+
+  public search(event) {
+    if (event.keyCode === 13) {
+      this._listPageService.searchByDabId(this.dabId.value)
+          .subscribe(data => {
+            this.data = data;
+            this._sharedService.setData(this.data);
+          });
+    }
   }
 
 

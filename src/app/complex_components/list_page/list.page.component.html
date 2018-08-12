@@ -3,7 +3,7 @@
         <div class="col">
             <form class="example-form">
                 <mat-form-field class="col">
-                    <input matInput placeholder="Search dab serial number" [formControl]="dabFormControl">
+                    <input matInput placeholder="Search dab serial number" (keypress)="search($event)" [formControl]="dabId">
                 </mat-form-field>
             </form>
         </div>

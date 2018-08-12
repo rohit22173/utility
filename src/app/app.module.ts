@@ -7,6 +7,7 @@ import { ListPagesModule } from './complex_components/list_page/list.page.module
 import { ListDetailsModule } from './complex_components/list_details/list.details.module';
 import { AppRoutingModule } from './app.routing';
 import { SharedService } from './shared.service';
+import { ProductResolver } from './product.resolver';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,7 @@ import { SharedService } from './shared.service';
     AppRoutingModule,
     ListDetailsModule
   ],
-  providers: [SharedService],
+  providers: [SharedService, ProductResolver],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -6,6 +6,10 @@ export class ListPageService {
     constructor(private http: HttpClient) { }
 
     public getDeviceDetails() {
-        return this.http.get('../../../data.json');
+        return this.http.get('http://localhost:3000/products');
+    }
+
+    public searchByDabId(dabId) {
+        return this.http.get('http://localhost:3000/products/' + dabId);
     }
 }

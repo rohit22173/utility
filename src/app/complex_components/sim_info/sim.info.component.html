@@ -1,73 +1,36 @@
 <div class="sim-info" *ngIf="data">
   <mat-tab-group>
-    <mat-tab label="Sim 1">
+    <mat-tab [label]="'Sim ' + ( i + 1 )" *ngFor="let sim of data; let i = index">
       <div class="row mt-20 align-bottom ">
         <div class="col">
-          <label class="data-label">{{data.sim_1.mobile_number}}</label>
+          <label class="data-label">{{sim.mobile_number}}</label>
           <label class="text-label">SIM Number</label>
         </div>
 
         <div class="col">
-          <label class="data-label">{{data.sim_1.imei}}</label>
+          <label class="data-label">{{sim.imei}}</label>
           <label class="text-label">SIM IMEI Number</label>
         </div>
 
         <div class="col">
-          <label class="data-label">{{data.sim_1.owner}}</label>
+          <label class="data-label">{{sim.owner}}</label>
           <label class="text-label">SIM Owner</label>
         </div>
       </div>
 
       <div class="row mt-20 align-bottom ">
         <div class="col">
-          <label class="data-label">{{data.sim_1.make}}</label>
+          <label class="data-label">{{sim.make}}</label>
           <label class="text-label">Make</label>
         </div>
 
         <div class="col">
-          <label class="data-label">{{data.sim_1.sim_number}}</label>
+          <label class="data-label">{{sim.sim_number}}</label>
           <label class="text-label">SIM Number</label>
         </div>
 
         <div class="col">
-          <label class="data-label">{{data.sim_1.internal_code}}</label>
-          <label class="text-label">Internal Code</label>
-        </div>
-      </div>
-    </mat-tab>
-
-
-    <mat-tab label="Sim 2">
-      <div class="row mt-20 align-bottom ">
-        <div class="col mb-20">
-          <label class="data-label">{{data.sim_2.mobile_number}}</label>
-          <label class="text-label">SIM Number</label>
-        </div>
-
-        <div class="col mb-20">
-          <label class="data-label">{{data.sim_2.imei}}</label>
-          <label class="text-label">SIM IMEI Number</label>
-        </div>
-
-        <div class="col mb-20">
-          <label class="data-label">{{data.sim_2.owner}}</label>
-          <label class="text-label">SIM Owner</label>
-        </div>
-      </div>
-
-      <div class="row mt-20 align-bottom">
-        <div class="col mb-20">
-          <label class="data-label">{{data.sim_2.make}}</label>
-          <label class="text-label">Make</label>
-        </div>
-
-        <div class="col mb-20">
-          <label class="data-label">{{data.sim_2.sim_number}}</label>
-          <label class="text-label">SIM Number</label>
-        </div>
-
-        <div class="col mb-20">
-          <label class="data-label">{{data.sim_2.internal_code}}</label>
+          <label class="data-label">{{sim.internal_code}}</label>
           <label class="text-label">Internal Code</label>
         </div>
       </div>
